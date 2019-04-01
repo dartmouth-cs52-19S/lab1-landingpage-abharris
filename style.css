@@ -1,0 +1,15 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+#topBanner {
+    background-image: url(alpacca.jpg);
+    background-size: cover;
+    font-family: 'Shadows into Light', cursive;
+}
+  
