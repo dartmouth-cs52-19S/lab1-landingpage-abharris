@@ -1,15 +1,117 @@
+/* https://fontawesome.com/how-to-use/on-the-web/referencing-icons/basic-use */
+/* explains how to style the font awesome icons using normal CSS */
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Varela Round', sans-serif;
 }
 
 ul {
     list-style-type: none;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 70%;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    color: lightblue;
+    font-size: 20px;
+    margin-right: 0;
+    padding-bottom: 0;
+
+}
+
+.menuItem {
+    color:lightblue;
+    font-size: 2vw;
+}
+
+.menuItem:hover {
+    color:orange;
+    /* http://www.rw-designer.com/cursor-detail/93245 */
+    /* how to insert the fun cursor from the web */
+    cursor: url(http://www.rw-designer.com/cursor-extern.php?id=93245), auto !important;
 }
 
 #topBanner {
-    background-image: url(alpacca.jpg);
     background-size: cover;
-    font-family: 'Shadows into Light', cursive;
+    /* photo credit: https://unsplash.com/@kate5oh3?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge */
+    background-image: url(images/pasta.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 80vh;
+    margin: 0px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
 }
+
   
+i {
+    color: lightblue;
+    font-size: 2em;
+}
+
+/* the game */
+/* select all the icons except for the logo icon */
+i:not(.fa-cookie-bite):hover {
+    color: lightgrey;
+}
+
+/* https://stackoverflow.com/questions/10853881/how-to-remove-underline-from-a-link-in-html */
+/* get rid of the dark blue underlines under my icons */
+a {
+    text-decoration: none;
+}
+
+.fa-cookie-bite {
+    color: burlywood;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+}
+
+/* https://www.w3schools.com/css/css3_buttons.asp */
+/* provides CSS for styling buttons */
+
+
+button {
+    border-radius: 4px;
+}
+
+.classicBut {
+    color:lightblue;
+    border: 0px;
+    background-color: gainsboro;
+    
+}
+.classicBut:hover {
+    color:pink;
+}
+
+.emailInput {
+    border-radius: 4px;
+    border-color: lightblue;
+}
+
+#CTA {
+    background-color: lightblue;
+    color: #186ef7;
+}
+
+/*
+#CTA:hover {
+
+} */
+
