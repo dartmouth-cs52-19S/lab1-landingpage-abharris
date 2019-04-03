@@ -91,6 +91,22 @@ h2 {
 button#exploreButton {
     height: 25%;
     width:25%;
+    font-size: 1.5vw;
+    border-radius: 4px;
+    background-color: #A5C4D4;
+    border: none;
+    color: #eff3f9;
+
+}
+
+button#exploreButton:hover {
+    opacity: .8;
+}
+
+button#exploreButton:active {
+    background-color: #91adbc;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }
 
 #triMenu {
@@ -108,6 +124,11 @@ button#exploreButton {
     align-items: center;
     font-size: 1.6vw;
     height: 60vh;
+    opacity: .65;
+}
+
+.menuBox:hover {
+    opacity: 1;
 }
 
 .menuBox i {
@@ -119,7 +140,7 @@ button#exploreButton {
 }
   
 i {
-    color: #99ff9a;
+    color: #A5C4D4;
     font-size: 2em;
 }
 
@@ -146,11 +167,15 @@ a {
     justify-content: center;
     align-items: center;
     height:50vh;
+    width: 100%;
+    padding: 20px;
 }
 
 img {
-    max-width: 33%;
+    max-width: 40%;
     max-height: 85%;
+    width: 25%;
+    height: 90%;
 
 }
 
@@ -161,9 +186,9 @@ img:hover {
 footer {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    padding: 4%;
+    height: 20vh;
     /* background credit to https://www.123rf.com/photo_94128213_stock-vector-simple-fast-food-vector-seamless-pattern-or-texture-made-with-thin-line-fast-food-icons.html */
     background-image:url(images/foodbackground.jpg);
 }
@@ -177,7 +202,7 @@ button {
 }
 
 .classicBut {
-    color: #99ff9a;
+    color: #A5C4D4;
     border: 0px;
     background-color: gainsboro;
     
@@ -188,11 +213,11 @@ button {
 
 .emailInput {
     border-radius: 4px;
-    border-color: #99ff9a;
+    border-color: #A5C4D4;
 }
 
 #CTA {
-    background-color:#99ff9a;
+    background-color:#A5C4D4;
     color: #186ef7;
     border: 0px;
 }
@@ -202,3 +227,22 @@ button {
 
 } */
 
+@media only screen and (max-width: 640px) {
+    #triMenu {
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        height: 60vh;
+    }
+
+    .menuBox {
+        height: 40%;
+        width: 100%;
+    }
+
+    footer {
+        flex-direction: column;
+        align-content: center;
+        justify-content: space-around;
+    }
+}
