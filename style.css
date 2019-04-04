@@ -33,16 +33,18 @@ nav {
     padding-bottom: 0;
     position: fixed;
     width: 100%;
+    z-index: 1;
 
 }
 
 .menuItem {
     color: #333333;
     font-size: 2vw;
+    transition: color .5s;
 }
 
 .menuItem:hover {
-    color: #99ff9a;
+    color: #A5C4D4;
     /* http://www.rw-designer.com/cursor-detail/93245 */
     /* how to insert the fun cursor from the web */
     cursor: url(http://www.rw-designer.com/cursor-extern.php?id=93245), auto !important;
@@ -80,6 +82,9 @@ nav {
     align-items: center;
 }
 
+#mobileMenu {
+    display: none;
+}
 
 h2 {
     margin: 0px;
@@ -88,7 +93,10 @@ h2 {
     text-align: center;
 }
 
-button#exploreButton {
+/* https://www.w3schools.com/howto/howto_css_animate_buttons.asp */
+/* css design help for making buttons animated */
+
+button#actionButton {
     height: 25%;
     width:25%;
     font-size: 1.5vw;
@@ -96,17 +104,27 @@ button#exploreButton {
     background-color: #A5C4D4;
     border: none;
     color: #eff3f9;
+    box-shadow: 0 9px #7c929e;
+    /* https://hackernoon.com/one-line-of-code-to-remove-focus-blue-outline-and-keep-accessibility-bca3ccea9892 */
+    /* gets rid of the outline when you press the button down */
+    outline: none;
 
 }
 
-button#exploreButton:hover {
-    opacity: .8;
-}
-
-button#exploreButton:active {
+button#actionButton:active {
     background-color: #91adbc;
-    box-shadow: 0 5px #666;
+    box-shadow: 0 5px #7c929e;
     transform: translateY(4px);
+    opacity: 1;
+}
+
+.buttonLink {
+    text-decoration: none;
+    color: #eff3f9;
+}
+
+.buttonLink:visited {
+    text-decoration: none;
 }
 
 #triMenu {
@@ -142,12 +160,25 @@ button#exploreButton:active {
 i {
     color: #A5C4D4;
     font-size: 2em;
+    transition: color .5s;
 }
 
 /* the game */
 /* select all the icons except for the logo icon */
 i:not(.fa-cookie-bite):hover {
     color: #d8d8d8;
+    font-size: 2.5em;
+}
+
+.fa-cookie-bite {
+    padding: 2%;
+}
+
+/* https://fontawesome.com/how-to-use/on-the-web/styling/rotating-icons */
+/* rotated the cookie */
+.fa-cookie-bite:hover {
+    font-size: 2.5em;
+    
 }
 
 /* https://stackoverflow.com/questions/10853881/how-to-remove-underline-from-a-link-in-html */
@@ -171,16 +202,22 @@ a {
     padding: 20px;
 }
 
+/* https://www.w3schools.com/css/css3_transitions.asp */
+/* adapted to make the image larger on hover using a transition */
 img {
-    max-width: 40%;
-    max-height: 85%;
+    max-width: 100%;
+    max-height: 100%;
     width: 25%;
-    height: 90%;
+    height: 80%;
+    transition: width 1s height 1s;
 
 }
 
 img:hover {
     opacity: .6;
+    width: 35%;
+    height: 100%;
+
 }
 
 footer {
@@ -197,35 +234,55 @@ footer {
 /* provides CSS for styling buttons */
 
 
-button {
-    border-radius: 4px;
-}
-
-.classicBut {
-    color: #A5C4D4;
-    border: 0px;
-    background-color: gainsboro;
-    
-}
-.classicBut:hover {
-    color:pink;
-}
-
 .emailInput {
     border-radius: 4px;
-    border-color: #A5C4D4;
-}
-
-#CTA {
-    background-color:#A5C4D4;
-    color: #186ef7;
     border: 0px;
+    outline: none;
+    height: 4vh;
 }
 
-/*
-#CTA:hover {
 
-} */
+.bottomBut {
+    background-color: #A5C4D4;
+    border: none;
+    color: #eff3f9;
+    border-radius: 4px;
+    border: 0px;
+    outline: none;
+    transition-timing-function: 0s;
+}
+
+.bottomBut a {
+    color: #eff3f9;
+}
+/* https://codeburst.io/tutorial-three-awesome-css-hover-transitions-animations-for-beginners-c14c08309091 */
+/* adapted from this to be a custom transition to jiggle my bottom buttons up and down */
+
+@keyframes wiggle {
+    20%  { transform: translateY(2px);  }
+    40%  { transform: translateY(-2px); }
+    60%  { transform: translateY(1px);  }
+    80%  { transform: translateY(-1px); }
+    100% { transform: translateY(0);    }
+  }
+
+.bottomBut:hover {
+    animation: wiggle 1s ease;
+    animation-iteration-count: 1;
+}
+
+#toggleMenu, label {
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+
+input[type=checkbox] {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+ }
+
 
 @media only screen and (max-width: 640px) {
     #triMenu {
@@ -245,4 +302,60 @@ button {
         align-content: center;
         justify-content: space-around;
     }
+
+    .menuItem {
+        opacity: 0;
+        height: 0;
+        width: 0;
+    }
+
+    #toggleMenu {
+        opacity: 1;
+        height: 20px;
+        width: 20px;
+        
+    }
+
+    /* http://dabblet.com/gist/1506530 */
+
+    label {
+        opacity: 1;
+        height: 20px;
+        width: 20px;
+        display: inline-block;
+        cursor: pointer;
+        padding-right: 60px;
+    }
+    
+    input[type=checkbox]:checked ~ label {
+        opacity: 0;
+        height: 0;
+        width: 0;
+    }
+
+    input[type=checkbox]:checked ~ #mobileMenu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-content: center;
+        background-color: #A5C4D4;
+    }
+
+    input[type=checkbox]:checked ~ #topToggle {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+    }
+
+    input[type=checkbox]:checked ~ #mobileMenuItems {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-content: center;
+
+    }
+
+
 }
+

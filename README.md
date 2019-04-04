@@ -1,6 +1,8 @@
 # Alexis' Landing Page
 ## URL of original page: https://flourbakery.com/
 
+<img src="ADD PICTURE OF PROJECT" width=x height=y>
+
 ## What I did
 
 ## Some pictures!
