@@ -173,6 +173,7 @@ i:not(.fa-cookie-bite):hover {
 
 .fa-cookie-bite {
     padding: 2%;
+    color: #deb887;
 }
 
 /* https://fontawesome.com/how-to-use/on-the-web/styling/rotating-icons */
@@ -186,11 +187,6 @@ i:not(.fa-cookie-bite):hover {
 /* get rid of the dark blue underlines under my icons */
 a {
     text-decoration: none;
-}
-
-/* transition help from CSS class slide 65 */
-.fa-cookie-bite {
-    color: #deb887;
 }
 
 #pictureHolder{
@@ -308,6 +304,14 @@ input[type=checkbox] {
  #navListMobile {
     list-style-type: none;
  }
+ 
+ #keyNavBar {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-around;
+     align-items: center;
+     width: 100%;
+ }
 
  
 
@@ -362,10 +366,21 @@ input[type=checkbox] {
     
     }
 
-
     input[type=checkbox]:checked ~ a {
         color: #333333;
         text-decoration: none;
+    }
+
+    /* nav change flex blox */
+
+    /* input[type=checkbox]:checked ~ nav {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    } */
+
+    nav {
+        flex-direction: column;
     }
     
 
