@@ -15,7 +15,7 @@ body {
     font-family: 'Josefin Sans', sans-serif;
 }
 
-ul {
+#navList {
     list-style-type: none;
     display:flex;
     flex-direction: row;
@@ -147,6 +147,7 @@ button#actionButton:active {
 
 .menuBox:hover {
     opacity: 1;
+    background-color: rgba(165, 196, 212, .2);
 }
 
 .menuBox i {
@@ -202,20 +203,30 @@ a {
     padding: 20px;
 }
 
+.titleWrap {
+    /* background credit to https://www.123rf.com/photo_94128213_stock-vector-simple-fast-food-vector-seamless-pattern-or-texture-made-with-thin-line-fast-food-icons.html */
+    background-image:url(images/foodbackground.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 20vh;
+}
+
 /* https://www.w3schools.com/css/css3_transitions.asp */
 /* adapted to make the image larger on hover using a transition */
 img {
     max-width: 100%;
     max-height: 100%;
-    width: 25%;
+    width: 20%;
     height: 80%;
-    transition: width 1s height 1s;
+    transition: width 1s, height 1s;
 
 }
 
 img:hover {
     opacity: .6;
-    width: 35%;
+    width: 25%;
     height: 100%;
 
 }
@@ -236,7 +247,9 @@ footer {
 
 .emailInput {
     border-radius: 4px;
-    border: 0px;
+    border: 1px;
+    border-style: outset;
+    border-color: #A5C4D4;
     outline: none;
     height: 4vh;
 }
@@ -249,7 +262,8 @@ footer {
     border-radius: 4px;
     border: 0px;
     outline: none;
-    transition-timing-function: 0s;
+    transition: linear;
+    transition-timing-function: 2s;
 }
 
 .bottomBut a {
@@ -271,7 +285,7 @@ footer {
     animation-iteration-count: 1;
 }
 
-#toggleMenu, label {
+label {
     opacity: 0;
     height: 0;
     width: 0;
@@ -283,6 +297,19 @@ input[type=checkbox] {
     left: -9999px;
  }
 
+ #navListMobile {
+     display: none;
+ }
+
+ #menuItemMobile {
+     display: none;
+ }
+
+ #navListMobile {
+    list-style-type: none;
+ }
+
+ 
 
 @media only screen and (max-width: 640px) {
     #triMenu {
@@ -309,15 +336,6 @@ input[type=checkbox] {
         width: 0;
     }
 
-    #toggleMenu {
-        opacity: 1;
-        height: 20px;
-        width: 20px;
-        
-    }
-
-    /* http://dabblet.com/gist/1506530 */
-
     label {
         opacity: 1;
         height: 20px;
@@ -327,35 +345,34 @@ input[type=checkbox] {
         padding-right: 60px;
     }
     
-    input[type=checkbox]:checked ~ label {
-        opacity: 0;
-        height: 0;
-        width: 0;
-    }
-
-    input[type=checkbox]:checked ~ #mobileMenu {
-        display: flex;
+    input[type=checkbox]:checked ~ #navListMobile {
+        list-style-type: none;
+        display:flex;
         flex-direction: column;
-        justify-content: space-between;
-        align-content: center;
-        background-color: #A5C4D4;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
     }
 
-    input[type=checkbox]:checked ~ #topToggle {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-content: center;
+    input[type=checkbox]:checked ~ #menuItemMobile {
+        display: inline-block;
+        color: #333333;
+        font-size: 2vw;
+        transition: color .5s;
+    
     }
 
-    input[type=checkbox]:checked ~ #mobileMenuItems {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-content: center;
 
+    input[type=checkbox]:checked ~ a {
+        color: #333333;
+        text-decoration: none;
     }
+    
 
+    /* http://dabblet.com/gist/1506530 */
+
+
+    
 
 }
 

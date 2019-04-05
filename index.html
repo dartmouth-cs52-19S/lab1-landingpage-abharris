@@ -9,53 +9,43 @@
 
     </head>
     <body>
-        <div id="mobileMenu">
 
-                    <div id="topToggle">
-                            <i class="fas fa-cookie-bite"></i>
-                            <a>X</a>
+        <nav>
+            <i class="fas fa-cookie-bite"></i>
+
+            <ul id="navList"> 
+                <a href="#">
+                    <li class="menuItem">About Me</li>
+                </a>
+                <a href="#">
+                    <li class="menuItem">My Recipe Box</li>
+                </a>
+                <a href=#>
+                    <li class="menuItem">Favorite Resturants</li>
+                </a>
+                <a href="#">
+                    <li class="menuItem">Food Pictures</li>
+                </a>
+            </ul>
+
+            <input type="checkbox" id="toggleMenu">
+            <label for="toggleMenu">Menu</label>
+
+            <ul id="navListMobile"> 
+                <a href="#">
+                    <li class="menuItemMobile">About Me</li>
+                </a>
+                <a href="#">
+                    <li class="menuItemMobile">My Recipe Box</li>
+                </a>
+                <a href=#>
+                    <li class="menuItemMobile">Favorite Resturants</li>
+                </a>
+                <a href="#">
+                    <li class="menuItemMobile">Food Pictures</li>
+                </a>
+            </ul>
             
-                    </div>
-                    <ul id="mobileMenuItems"> 
-                            <a href="#">
-                                <li class="mobileItem">About Me</li>
-                            </a>
-                            <a href="#">
-                                <li class="mobileItem">My Recipe Box</li>
-                            </a>
-                            <a href=#>
-                                <li class="mobileItem">Favorite Resturants</li>
-                            </a>
-                            <a href="#">
-                                <li class="mobileItem">Food Pictures</li>
-                            </a>
-                    </ul>
-
-        </div>
-
-        <nav><!-- nav bar -->
-
-                <i class="fas fa-cookie-bite"></i>
-
-                <ul> 
-                    <a href="#">
-                        <li class="menuItem">About Me</li>
-                    </a>
-                    <a href="#">
-                        <li class="menuItem">My Recipe Box</li>
-                    </a>
-                    <a href=#>
-                        <li class="menuItem">Favorite Resturants</li>
-                    </a>
-                    <a href="#">
-                        <li class="menuItem">Food Pictures</li>
-                    </a>
-                </ul>
-
-                <input type="checkbox" id="toggleMenu">
-                <label for="toggleMenu" onclick> Menu </label>
-            
-            <!-- list -->
         </nav>
 
         <div id="topBanner">
@@ -99,7 +89,10 @@
         </div>
 
         <div>
-            <h1 class="title">Food Snapshots</h1>
+            <div class="titleWrap">
+                <h1 class="title">Food Snapshots</h1>
+            </div>
+            
             <div id="pictureHolder">
                 <img src="images/misi.jpg">
                 <img src="images/thanksgiving.jpg">
