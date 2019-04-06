@@ -251,13 +251,14 @@ footer {
     padding: 0;
 }
 
-li a {
+.bottomLinkMenuItem a {
     text-decoration: none;
     color: #333333;
     font-size: 1.5vw;
+    padding: 10%;
 }
 
-li a:hover {
+.bottomLinkMenuItem a:hover {
     color: #A5C4D4;
 }
 
