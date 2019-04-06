@@ -8,7 +8,7 @@ html {
 }
 
 /* https://fontawesome.com/how-to-use/on-the-web/referencing-icons/basic-use */
-/* explains how to style the font awesome icons using normal CSS */
+/* instructions on how to style the font awesome icons using normal CSS */
 body {
     margin: 0;
     padding: 0;
@@ -50,6 +50,10 @@ nav {
     cursor: url(http://www.rw-designer.com/cursor-extern.php?id=93245), auto !important;
 }
 
+#mobileMenu {
+    display: none;
+}
+
 #topBanner {
     /* photo credit: https://unsplash.com/photos/4nXkhLCrkLo */
     background-image: url(images/francefarm.jpg);
@@ -80,10 +84,6 @@ nav {
     height: 25vh;
     justify-content: center;
     align-items: center;
-}
-
-#mobileMenu {
-    display: none;
 }
 
 h2 {
@@ -164,7 +164,7 @@ i {
     transition: color .5s;
 }
 
-/* the game */
+/* http://flukeout.github.io/ */
 /* select all the icons except for the logo icon */
 i:not(.fa-cookie-bite):hover {
     color: #d8d8d8;
@@ -176,8 +176,6 @@ i:not(.fa-cookie-bite):hover {
     color: #deb887;
 }
 
-/* https://fontawesome.com/how-to-use/on-the-web/styling/rotating-icons */
-/* rotated the cookie */
 .fa-cookie-bite:hover {
     font-size: 2.5em;
     
@@ -295,14 +293,17 @@ input[type=checkbox] {
 
  #navListMobile {
      display: none;
+     list-style-type: none;
  }
 
- #menuItemMobile {
-     display: none;
+ .menuItemMobile {
+    color: #A5C4D4;
+    font-size: 2.6vw;
+    transition: color .5s;
  }
 
- #navListMobile {
-    list-style-type: none;
+ .menuItemMobile:hover { 
+    color: #333333;
  }
  
  #keyNavBar {
@@ -312,8 +313,6 @@ input[type=checkbox] {
      align-items: center;
      width: 100%;
  }
-
- 
 
 @media only screen and (max-width: 640px) {
     #triMenu {
@@ -348,6 +347,10 @@ input[type=checkbox] {
         cursor: pointer;
         padding-right: 60px;
     }
+
+    nav {
+        flex-direction: column;
+    }
     
     input[type=checkbox]:checked ~ #navListMobile {
         list-style-type: none;
@@ -355,34 +358,11 @@ input[type=checkbox] {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 70%;
+        width: 100%;
+        background-color: rgba(51, 51, 51, .3);
+        padding: 2%;
     }
 
-    input[type=checkbox]:checked ~ #menuItemMobile {
-        display: inline-block;
-        color: #333333;
-        font-size: 2vw;
-        transition: color .5s;
-    
-    }
-
-    input[type=checkbox]:checked ~ a {
-        color: #333333;
-        text-decoration: none;
-    }
-
-    /* nav change flex blox */
-
-    /* input[type=checkbox]:checked ~ nav {
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-    } */
-
-    nav {
-        flex-direction: column;
-    }
-    
 
     /* http://dabblet.com/gist/1506530 */
 
