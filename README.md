@@ -20,7 +20,7 @@ This is a picture of my blog in the only html stage. For the most part, I stuck 
 There are a few hover/action effects that I have that it wouldn't let me screenshot because you have to press down. I have a pizza cursor when you hover over my menu (wouldn't let me screen shot that), a button that has a 3d push down event when clicked, and my footer menu items (contact me, Let's go, other interests, etc) jiggle on hover. Additionally all my icons from Font Awesmoe get larger (some change color) when you hover.
 
 Transition to larger image on hover:
-![image hover](images/imageHover.png)
+![image hover](images/imageHover2.png)
 
 Transition to larger icons on hover:
 
