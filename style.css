@@ -231,12 +231,44 @@ img:hover {
 
 footer {
     display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    /* background credit to https://www.123rf.com/photo_94128213_stock-vector-simple-fast-food-vector-seamless-pattern-or-texture-made-with-thin-line-fast-food-icons.html */
+    
+}
+
+.topFooter {
+    display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    height: 20vh;
-    /* background credit to https://www.123rf.com/photo_94128213_stock-vector-simple-fast-food-vector-seamless-pattern-or-texture-made-with-thin-line-fast-food-icons.html */
+    width: 100%;
+}
+
+.topFooter ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li a {
+    text-decoration: none;
+    color: #333333;
+    font-size: 1.5vw;
+}
+
+li a:hover {
+    color: #A5C4D4;
+}
+
+.bottomFooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
     background-image:url(images/foodbackground.jpg);
+    height: 12vh;
 }
 
 /* the below (for these buttons) is adapted from: https://www.w3schools.com/css/css3_buttons.asp */
@@ -334,10 +366,11 @@ input[type=checkbox] {
         width: 100%;
     }
 
-    footer {
+    .bottomFooter {
         flex-direction: column;
         align-content: center;
         justify-content: space-around;
+        height: 20vh;
     }
 
     .menuItem {
@@ -373,6 +406,22 @@ input[type=checkbox] {
         background-color: rgba(51, 51, 51, .3);
         padding: 2%;
     }    
+
+    .topFooter {
+        flex-direction: column;
+        justify-content: space-around;
+        align-content: center;
+        height: 20vh;
+    }
+
+    .menuName:hover {
+        color: #A5C4D4;
+        cursor: pointer;
+    }
+ 
+    .topFooter ul {
+        display:none;
+    }
 
 }
 
