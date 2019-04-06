@@ -7,7 +7,7 @@ html {
     box-sizing: inherit;
 }
 
-/* https://fontawesome.com/how-to-use/on-the-web/referencing-icons/basic-use */
+/* adapted from: https://fontawesome.com/how-to-use/on-the-web/referencing-icons/basic-use */
 /* instructions on how to style the font awesome icons using normal CSS */
 body {
     margin: 0;
@@ -34,7 +34,6 @@ nav {
     position: fixed;
     width: 100%;
     z-index: 1;
-
 }
 
 .menuItem {
@@ -45,7 +44,7 @@ nav {
 
 .menuItem:hover {
     color: #A5C4D4;
-    /* http://www.rw-designer.com/cursor-detail/93245 */
+    /* adapted from: http://www.rw-designer.com/cursor-detail/93245 */
     /* how to insert the fun cursor from the web */
     cursor: url(http://www.rw-designer.com/cursor-extern.php?id=93245), auto !important;
 }
@@ -57,6 +56,8 @@ nav {
 #topBanner {
     /* photo credit: https://unsplash.com/photos/4nXkhLCrkLo */
     background-image: url(images/francefarm.jpg);
+
+    /* didn't use cover as the size because I wanted full image always */
     background-size: 100% 100%;
     background-repeat: no-repeat;
     width: 100%;
@@ -78,7 +79,6 @@ nav {
 #subBanner {
     /* background credit to https://www.123rf.com/photo_94128213_stock-vector-simple-fast-food-vector-seamless-pattern-or-texture-made-with-thin-line-fast-food-icons.html */
     background-image:url(images/foodbackground.jpg);
-    /* background-size: 20% 100%; */
     display: flex;
     flex-direction: column;
     height: 25vh;
@@ -93,8 +93,8 @@ h2 {
     text-align: center;
 }
 
-/* https://www.w3schools.com/howto/howto_css_animate_buttons.asp */
-/* css design help for making buttons animated */
+/* adapted from: https://www.w3schools.com/howto/howto_css_animate_buttons.asp */
+/* css design help for making one of my CTA buttons 3d animated */
 
 button#actionButton {
     height: 25%;
@@ -105,8 +105,10 @@ button#actionButton {
     border: none;
     color: #eff3f9;
     box-shadow: 0 9px #7c929e;
-    /* https://hackernoon.com/one-line-of-code-to-remove-focus-blue-outline-and-keep-accessibility-bca3ccea9892 */
-    /* gets rid of the outline when you press the button down */
+    transition: translate(Y) 0s;
+
+    /* adapted from: https://hackernoon.com/one-line-of-code-to-remove-focus-blue-outline-and-keep-accessibility-bca3ccea9892 */
+    /* gets rid of the outline when you press a button down */
     outline: none;
 
 }
@@ -123,6 +125,10 @@ button#actionButton:active {
     color: #eff3f9;
 }
 
+.buttonLink:hover {
+    color: #7c929e;
+}
+
 .buttonLink:visited {
     text-decoration: none;
 }
@@ -135,11 +141,11 @@ button#actionButton:active {
 }
 
 .menuBox {
-    width:33%;
     display:flex;
     flex-direction:column;
     justify-content: center;
     align-items: center;
+    width:33%;
     font-size: 1.6vw;
     height: 60vh;
     opacity: .65;
@@ -164,7 +170,7 @@ i {
     transition: color .5s;
 }
 
-/* http://flukeout.github.io/ */
+/* adapted from: http://flukeout.github.io/ */
 /* select all the icons except for the logo icon */
 i:not(.fa-cookie-bite):hover {
     color: #d8d8d8;
@@ -181,7 +187,7 @@ i:not(.fa-cookie-bite):hover {
     
 }
 
-/* https://stackoverflow.com/questions/10853881/how-to-remove-underline-from-a-link-in-html */
+/* adapted from: https://stackoverflow.com/questions/10853881/how-to-remove-underline-from-a-link-in-html */
 /* get rid of the dark blue underlines under my icons */
 a {
     text-decoration: none;
@@ -207,22 +213,20 @@ a {
     height: 20vh;
 }
 
-/* https://www.w3schools.com/css/css3_transitions.asp */
-/* adapted to make the image larger on hover using a transition */
+/* adapted from: https://www.w3schools.com/css/css3_transitions.asp */
+/* used to make the image larger on hover using a transition */
 img {
     max-width: 100%;
     max-height: 100%;
     width: 20%;
     height: 80%;
     transition: width 1s, height 1s;
-
 }
 
 img:hover {
     opacity: .6;
     width: 25%;
     height: 100%;
-
 }
 
 footer {
@@ -235,9 +239,8 @@ footer {
     background-image:url(images/foodbackground.jpg);
 }
 
-/* https://www.w3schools.com/css/css3_buttons.asp */
-/* provides CSS for styling buttons */
-
+/* the below (for these buttons) is adapted from: https://www.w3schools.com/css/css3_buttons.asp */
+/* provides CSS for styling buttons nicely */
 
 .emailInput {
     border-radius: 4px;
@@ -247,7 +250,6 @@ footer {
     outline: none;
     height: 4vh;
 }
-
 
 .bottomBut {
     background-color: #A5C4D4;
@@ -263,9 +265,9 @@ footer {
 .bottomBut a {
     color: #eff3f9;
 }
-/* https://codeburst.io/tutorial-three-awesome-css-hover-transitions-animations-for-beginners-c14c08309091 */
-/* adapted from this to be a custom transition to jiggle my bottom buttons up and down */
 
+/* adapted from: https://codeburst.io/tutorial-three-awesome-css-hover-transitions-animations-for-beginners-c14c08309091 */
+/* adapted from this to be a custom transition to jiggle my bottom buttons up and down */
 @keyframes wiggle {
     20%  { transform: translateY(2px);  }
     40%  { transform: translateY(-2px); }
@@ -278,6 +280,10 @@ footer {
     animation: wiggle 1s ease;
     animation-iteration-count: 1;
 }
+
+/* http://dabblet.com/gist/1506530 */
+/* https://codeburst.io/awesome-checkbox-and-radio-button-css-hacks-a8c24fb15a95 */ 
+/* adapted checkbox hack from these two sources to make it work with my code and dropdown menu */
 
 label {
     opacity: 0;
@@ -313,6 +319,7 @@ input[type=checkbox] {
      align-items: center;
      width: 100%;
  }
+
 
 @media only screen and (max-width: 640px) {
     #triMenu {
@@ -352,6 +359,10 @@ input[type=checkbox] {
         flex-direction: column;
     }
     
+    /* http://dabblet.com/gist/1506530 */
+    /* https://codeburst.io/awesome-checkbox-and-radio-button-css-hacks-a8c24fb15a95 */ 
+    /* adapted checkbox hack from these two sources to make it work with my code and dropdown menu */
+
     input[type=checkbox]:checked ~ #navListMobile {
         list-style-type: none;
         display:flex;
@@ -361,13 +372,7 @@ input[type=checkbox] {
         width: 100%;
         background-color: rgba(51, 51, 51, .3);
         padding: 2%;
-    }
-
-
-    /* http://dabblet.com/gist/1506530 */
-
-
-    
+    }    
 
 }
 
