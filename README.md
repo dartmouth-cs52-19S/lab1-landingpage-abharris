@@ -10,7 +10,6 @@ I was inspired by the KAF website and used that to create my own food landing pa
 ### Layout stage
 
 This is a picture of my blog in the only html stage. For the most part, I stuck with the content and layout, though I ended up needing to add a few more divs and changing some of the text as I was styling. 
-Reference-style: 
 ![layout][/images/HTMLLayout.png]
 
 ### Special stuff
