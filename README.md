@@ -1,5 +1,6 @@
 # Alexis' Landing Page
 ## URL of inspiration page: https://flourbakery.com/
+## Inspiration for the bottom links since ^ doesn't have https://mixpanel.com/
 
 ## What I did and what worked/didn't
 
