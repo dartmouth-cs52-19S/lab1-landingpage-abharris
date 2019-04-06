@@ -10,7 +10,8 @@ I was inspired by the KAF website and used that to create my own food landing pa
 ### Layout stage
 
 This is a picture of my blog in the only html stage. For the most part, I stuck with the content and layout, though I ended up needing to add a few more divs and changing some of the text as I was styling. 
-![Layout](/images/HTMLLayout.png)
+![Image of Layout]
+(https://github.com/dartmouth-cs52-19S/lab1-landingpage-abharris/blob/gh-pages/images/HTMLLayout.jpg)
 
 ### Completed landing page
 
