@@ -20,18 +20,16 @@ This is a picture of my blog in the only html stage. For the most part, I stuck 
 There are a few hover/action effects that I have that it wouldn't let me screenshot because you have to press down. I have a pizza cursor when you hover over my menu (wouldn't let me screen shot that), a button that has a 3d push down event when clicked, and my footer menu items (contact me, Let's go, other interests, etc) jiggle on hover. Additionally all my icons from Font Awesmoe get larger (some change color) when you hover.
 
 Transition to larger image on hover:
-
-<img src="images/imageHover.png" width=x height=y>
+![image hover](images/imageHover.png)
 
 Transition to larger icons on hover:
 
-<img src="images/iconHover.png" width=x height=y>
-
+![icon hover](images/iconHover.png)
 
 #### Checkbox Hack
 
 I was able to use CSS to make an expandable dropdown menu for the mobile version of my site.   
 
+![checkbox1](images/checkbox1.png)
 
-<img src="images/checkbox1.png" width=x height=y>
-<img src="images/checkbox2.png" width=x height=y>
+![checkbox1](images/checkbox2.png)
